@@ -1,0 +1,25 @@
+﻿<Window x:Class="Szokitalalo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Szokitalalo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Label Content="Szókitaláló" FontSize="60"></Label>
+            <Label Content="Kattintson a kártyákra, hogy kitalálja a szót!"></Label>
+        </StackPanel>
+        <StackPanel x:Name="kartyak" Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal"/>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Content="Új szó" Width="100" Height="20" Margin="5" Click="ujszo"/>
+            <Button Content="Ellenőrzés" Width="100" Height="20" Margin="5" Click="ellenorzes"/>
+        </StackPanel>
+    </Grid>
+</Window>
